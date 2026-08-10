@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Wesley Lima</title>
+    
+    <!-- Fonte Inter (Padrão para Tech e UX) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CONFIGURAÇÕES GERAIS E RESET DE MARGENS */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            scroll-behavior: smooth; 
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            display: flex;
+            transition: 0.3s;
+        }
+
+        /* CHECKBOX HACK (Menu Celular) */
+        #menu-check { display: none; }
+
+        .btn-menu {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #253d4e;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            z-index: 1001;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* BARRA LATERAL (MANTIDA) */
+        aside {
+            width: 240px;
+            background-color: #253d4e;
+            color: #ffffff;
+            padding: 40px 25px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+            z-index: 1000;
+            transition: transform 0.4s ease;
+        }
+
+        aside h3 {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.4);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 5px;
+        }
+
+        .contato-info {
+            font-size: 0.75rem;
+            margin: 5px 0;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.4;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.75rem;
+            display: block;
+            padding: 4px 0;
+            transition: 0.2s;
+        }
+        .nav-link:hover { color: #ffffff; }
+
+        .idiomas-list {
+            list-style: none;
+            font-size: 0.8rem;
+        }
+        .idiomas-list li { margin-bottom: 8px; color: rgba(255,255,255,0.8);}
+
+        .skills-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .tag {
+            background-color: #ffffff;
+            color: #253d4e;
+            padding: 3px 7px;
+            border-radius: 2px;
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* CONTEÚDO PRINCIPAL (CORRIGIDO) */
+        main {
+            margin-left: 240px;
+            flex: 1;
+            padding: 60px 80px;
+            max-width: 950px;
+        }
+
+        header { margin-bottom: 40px; }
+        h1 { font-size: 2.2rem; margin: 0; color: #253d4e; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 5px; }
+        .subtitulo { color: #666; font-size: 1rem; font-weight: 400; margin-bottom: 5px; }
+        .location { font-size: 0.85rem; color: #999; }
+
+        section { margin-bottom: 35px; }
+        
+        h2 { 
+            font-size: 0.9rem; 
+            color: #253d4e; 
+            margin-bottom: 5px; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        hr { 
+            border: 0; 
+            border-top: 1px solid #f0f0f0; 
+            margin-bottom: 20px; 
+        }
+
+        .item { margin-bottom: 30px; }
+        
+        /* AJUSTE DO TÍTULO E DATA PARA FICAREM PRÓXIMOS */
+        .item-title { 
+            font-size: 1.15rem; 
+            font-weight: 700; 
+            color: #222; 
+            margin-bottom: 2px; /* Espaço quase zero embaixo do título */
+        }
+
+        .item-date { 
+            font-size: 0.85rem; 
+            color: #999; 
+            display: block; 
+            margin-bottom: 10px; /* Espaço entre a data e a descrição */
+        }
+
+        p.text-body { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 15px; }
+        
+        ul.bullet-list { padding-left: 18px; margin: 0; }
+        ul.bullet-list li { font-size: 0.9rem; color: #444; margin-bottom: 6px; }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .btn-menu { display: block; }
+            aside { transform: translateX(-240px); }
+            #menu-check:checked ~ aside { transform: translateX(0); }
+            main { margin-left: 0; padding: 40px 25px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="menu-check">
+    <label for="menu-check" class="btn-menu">☰ MENU</label>
+
+    <aside>
+        <h3>Contato</h3>
+        <p class="contato-info">17 99792-8199</p>
+        <p class="contato-info"><a href="mailto:wbarbozalima@hotmail.com" class="nav-link">wbarbozalima@hotmail.com</a></p>
+        <p class="contato-info"><a href="https://linkedin.com/in/wezeley" target="_blank" class="nav-link">LinkedIn</a></p>
+        <p class="contato-info"><a href="https://github.com/wezeley" target="_blank" class="nav-link">GitHub</a></p>
+
+        <h3>Idiomas</h3>
+        <ul class="idiomas-list">
+            <li>Português</li>
+            <li>Inglês</li>
+            <li>Espanhol</li>
+        </ul>
+
+        <h3>Desenvolvimento</h3>
+        <div class="skills-group">
+            <span class="tag">C#</span>
+            <span class="tag">.NET</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Git</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+        </div>
+
+        <h3>Design</h3>
+        <div class="skills-group">
+            <span class="tag">Figma</span>
+            <span class="tag">Adobe CC</span>
+            <span class="tag">UI Design</span>
+            <span class="tag">UX Research</span>
+            <span class="tag">Prototipagem</span>
+        </div>
+
+        <h3>Projetos</h3>
+        <p><a href="https://github.com/wezeley/Hanbin-Track" target="_blank" class="nav-link">→ Sistema de Jornada <br> <small> &emsp; (HanbinBot) </small> </a></p> 
+        <p><a href="#" class="nav-link">→ Este Currículo Web</a></p>
+    </aside>
+
+   <main>
+        <header>
+            <h1>Wesley da Silva Barboza Lima</h1>
+            <p class="subtitulo">Estudante de ADS | Desenvolvedor Full Stack em formação | UX/UI</p>
+            <p class="location">São José do Rio Preto, São Paulo, Brasil</p>
+        </header>
+
+        <section>
+            <h2>Objetivo Profissional:</h2>
+            <hr>
+            <p class="text-body">Estudante de Análise e Desenvolvimento de Sistemas, com experiência em criação de soluções digitais, desenvolvimento de projetos web e interesse em desenvolvimento Full Stack e experiência do usuário.</p>
+            <p class="text-body">Possuo conhecimentos em programação, banco de dados, APIs e prototipação de interfaces, unindo visão técnica e conhecimento em UX/UI.</p>
+        </section>
+
+        <section>
+            <h2>Experiência:</h2>
+            <hr>
+            
+            <div class="item">
+                <p class="item-title">Produtor de Conteúdo Digital | Freelance</p>
+                <span class="item-date">abril de 2023 - Presente</span>
+                <ul class="bullet-list">
+                    <li>Desenvolvimento e gerenciamento de soluções e projetos digitais para clientes.</li>
+                    <li>Organização de processos, planejamento de conteúdo e análise de desempenho.</li>
+                    <li>Criação de interfaces visuais e desenvolvimento de visão de produto.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <p class="item-title">Filmmaker | Seguralta</p>
+                <span class="item-date">março de 2020 - abril de 2021</span>
+                <ul class="bullet-list">
+                    <li>Planejamento, produção e entrega de projetos audiovisuais digitais.</li>
+                    <li>Trabalho colaborativo participando de decisões sobre formatos e soluções criativas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formação Acadêmica:</h2>
+            <hr>
+
+            <div class="item">
+                <p class="item-title">Centro Universitário de Rio Preto</p>
+                <span class="item-date">fevereiro de 2025 - dezembro de 2027</span>
+                <p class="text-body">Curso Superior de Tecnologia (CST), Análise e Desenvolvimento de Sistemas</p>
+            </div>
+
+            <div class="item">
+                <p class="item-title">Anhanguera Educacional</p>
+                <span class="item-date">fevereiro de 2023 - fevereiro de 2024</span>
+                <p class="text-body">Pós-graduação, Experiência do usuário - UX / Design Thinking</p>
+            </div>
+
+            <div class="item">
+                <p class="item-title">Universidade Federal de Santa Maria</p>
+                <span class="item-date">2013 - 2018</span>
+                <p class="text-body">Bacharelado, Publicidade e Propaganda</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
