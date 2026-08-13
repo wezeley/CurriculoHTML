@@ -59,6 +59,17 @@
             transition: transform 0.4s ease;
         }
 
+         .foto-perfil {
+             width: 110px;           /* Tamanho ideal para uma barra de 230px */
+             height: 110px;
+             border-radius: 50%;     /* Faz o círculo perfeito */
+              border: 2px solid #fff; /* A borda branca de 2px que você pediu */
+              display: block;         /* Permite centralizar com margin auto */
+              margin: 0 auto 20px auto; /* Centraliza e dá um espaço de 20px embaixo */
+              object-fit: cover;      /* Garante que a foto não fique esticada */
+              background-color: #eee; /* Cor de fundo caso a imagem falhe */
+        }
+
         aside h3 {
             font-size: 0.65rem;
             text-transform: uppercase;
@@ -177,6 +188,9 @@
     <label for="menu-check" class="btn-menu">☰ MENU</label>
 
     <aside>
+
+        <img src="Wesley.jpg" alt="Foto de Wesley Lima" class="foto-perfil">
+
         <h3>Contato</h3>
         <p class="contato-info">17 99792-8199</p>
         <p class="contato-info"><a href="mailto:wbarbozalima@hotmail.com" class="nav-link">wbarbozalima@hotmail.com</a></p>
@@ -211,8 +225,8 @@
         </div>
 
         <h3>Projetos</h3>
-        <p><a href="https://github.com/wezeley/Hanbin-Track" target="_blank" class="nav-link">→ Sistema de Jornada <br> <small> &emsp; (HanbinBot) </small> </a></p> 
-        <p><a href="#" class="nav-link">→ Este Currículo Web</a></p>
+        <p><a href="https://wezeley.github.io/Hanbin-Track/" target="_blank" class="nav-link">→ Sistema de Jornada <br> <small> &emsp; (HanbinBot) </small> </a></p> 
+        <p><a href="https://wezeley.github.io/CurriculoHTML/" target="_blank" class="nav-link">→ Este Currículo Web</a></p>
     </aside>
 
    <main>
